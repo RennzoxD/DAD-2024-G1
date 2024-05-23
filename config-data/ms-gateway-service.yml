@@ -1,6 +1,5 @@
 server:
-  #port: 8089
-  port: ${PORT:${SERVER_PORT:0}}
+  port: 8089
 
 
 eureka:
