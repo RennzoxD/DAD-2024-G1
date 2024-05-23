@@ -1,5 +1,5 @@
 server:
-  #port: 8092
+  #port: 8083
   port: ${PORT:${SERVER_PORT:0}}
 springdoc:
   api-docs:
@@ -14,18 +14,18 @@ spring:
     show-sql: true
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ms-pedido
+    url: jdbc:mysql://localhost:3306/ms_pedido
     username: root
     password:
 
 eureka:
   client:
     serviceUrl:
-      #defaultZone: http://localhost:8091/eureka
-      defaultZone: ${EUREKA_URI:http://localhost:8091/eureka}
+      defaultZone: ${EUREKA_URI:http://localhost:8090/eureka}
   instance:
     #hostname: localhost
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
 resilience4j.circuitbreaker:
   instances:
     productoListarPorIdCB:

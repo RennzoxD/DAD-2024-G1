@@ -1,6 +1,5 @@
 package com.example.msauth.entity;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,6 +19,7 @@ public class AuthUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String username;
+    private String userName;
     private String password;
+
 }
